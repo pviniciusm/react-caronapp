@@ -4,7 +4,7 @@
     <item
         android:width="200dp"
         android:height="200dp"
-        android:drawable="@drawable/caronapp"
+        android:drawable="@drawable/icon"
         android:gravity="center"
         android:text="Crarona"
     />

@@ -55,6 +55,18 @@
 		D0139137DEAD4E75AA686639 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08EE33AF546A42289295A07A /* SimpleLineIcons.ttf */; };
 		8BA1D2EC29EA453DB4BEA530 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 202EF53F6DF247FFB1BDAD45 /* Zocial.ttf */; };
 		3CD947AEB09A47889E83C5F3 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7839753037EF4C1EBDA7DCEF /* libRNGestureHandler.a */; };
+		87E5D11823F34E2E8A8AD974 /* Quantify.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD86AF2DD88A4DD6AB19074E /* Quantify.ttf */; };
+		233E7BA4BE734E118AF34869 /* Gravity-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B8FAEDBFA2784D0E8C9260EE /* Gravity-Bold.otf */; };
+		3896F4F67D0745E69D95AE16 /* Gravity-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AC3FA7934914E86AF9D7D1A /* Gravity-BoldItalic.otf */; };
+		3120F1E9F08947C5A0764925 /* Gravity-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = DA0117D7DE7C4C54A6CCE7B1 /* Gravity-Book.otf */; };
+		6CD5E5F286924DE59413DF1C /* Gravity-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 99683910988D49ABB9CFE365 /* Gravity-BookItalic.otf */; };
+		327F949493474C6794D75893 /* Gravity-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30546389C00F443597451272 /* Gravity-Italic.otf */; };
+		5CF43C9016B94161A1BFB38F /* Gravity-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B71835184A1459FA8538DC7 /* Gravity-Light.otf */; };
+		552B72681EB341998C9EA594 /* Gravity-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 008A3CDD6B78444588C5223E /* Gravity-LightItalic.otf */; };
+		8A9DB0DEC0F841F9A1A9DD0C /* Gravity-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D595DEA872F74EE081AFF92E /* Gravity-Regular.otf */; };
+		194C1BD7F5324FCB89468897 /* Gravity-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA9E918D6F754F238128F95D /* Gravity-UltraLight.otf */; };
+		AFF757541BC84D98A0A2982E /* Gravity-UltraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C0A2D9CAB6D4D17BD69CB61 /* Gravity-UltraLightItalic.otf */; };
+		3A58046337E743B39C83867D /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 180F2656157B4F679C064727 /* libRCTOrientation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -380,6 +392,19 @@
 		202EF53F6DF247FFB1BDAD45 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		4713859326E44C2AB1D06B33 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; name = "RNGestureHandler.xcodeproj"; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		7839753037EF4C1EBDA7DCEF /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		BD86AF2DD88A4DD6AB19074E /* Quantify.ttf */ = {isa = PBXFileReference; name = "Quantify.ttf"; path = "../assets/fonts/Quantify.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B8FAEDBFA2784D0E8C9260EE /* Gravity-Bold.otf */ = {isa = PBXFileReference; name = "Gravity-Bold.otf"; path = "../assets/fonts/Gravity-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5AC3FA7934914E86AF9D7D1A /* Gravity-BoldItalic.otf */ = {isa = PBXFileReference; name = "Gravity-BoldItalic.otf"; path = "../assets/fonts/Gravity-BoldItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DA0117D7DE7C4C54A6CCE7B1 /* Gravity-Book.otf */ = {isa = PBXFileReference; name = "Gravity-Book.otf"; path = "../assets/fonts/Gravity-Book.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		99683910988D49ABB9CFE365 /* Gravity-BookItalic.otf */ = {isa = PBXFileReference; name = "Gravity-BookItalic.otf"; path = "../assets/fonts/Gravity-BookItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		30546389C00F443597451272 /* Gravity-Italic.otf */ = {isa = PBXFileReference; name = "Gravity-Italic.otf"; path = "../assets/fonts/Gravity-Italic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1B71835184A1459FA8538DC7 /* Gravity-Light.otf */ = {isa = PBXFileReference; name = "Gravity-Light.otf"; path = "../assets/fonts/Gravity-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		008A3CDD6B78444588C5223E /* Gravity-LightItalic.otf */ = {isa = PBXFileReference; name = "Gravity-LightItalic.otf"; path = "../assets/fonts/Gravity-LightItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D595DEA872F74EE081AFF92E /* Gravity-Regular.otf */ = {isa = PBXFileReference; name = "Gravity-Regular.otf"; path = "../assets/fonts/Gravity-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BA9E918D6F754F238128F95D /* Gravity-UltraLight.otf */ = {isa = PBXFileReference; name = "Gravity-UltraLight.otf"; path = "../assets/fonts/Gravity-UltraLight.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2C0A2D9CAB6D4D17BD69CB61 /* Gravity-UltraLightItalic.otf */ = {isa = PBXFileReference; name = "Gravity-UltraLightItalic.otf"; path = "../assets/fonts/Gravity-UltraLightItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		019400A094BE48FFB03D2068 /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; name = "RCTOrientation.xcodeproj"; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		180F2656157B4F679C064727 /* libRCTOrientation.a */ = {isa = PBXFileReference; name = "libRCTOrientation.a"; path = "libRCTOrientation.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +434,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				02B1305D07D94840851C38B1 /* libRNVectorIcons.a in Frameworks */,
 				3CD947AEB09A47889E83C5F3 /* libRNGestureHandler.a in Frameworks */,
+				3A58046337E743B39C83867D /* libRCTOrientation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +624,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				3706CDCD0E3F40E49A35B575 /* RNVectorIcons.xcodeproj */,
 				4713859326E44C2AB1D06B33 /* RNGestureHandler.xcodeproj */,
+				019400A094BE48FFB03D2068 /* RCTOrientation.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -664,6 +691,17 @@
 				C84987364E924309BDBD02F6 /* Octicons.ttf */,
 				08EE33AF546A42289295A07A /* SimpleLineIcons.ttf */,
 				202EF53F6DF247FFB1BDAD45 /* Zocial.ttf */,
+				BD86AF2DD88A4DD6AB19074E /* Quantify.ttf */,
+				B8FAEDBFA2784D0E8C9260EE /* Gravity-Bold.otf */,
+				5AC3FA7934914E86AF9D7D1A /* Gravity-BoldItalic.otf */,
+				DA0117D7DE7C4C54A6CCE7B1 /* Gravity-Book.otf */,
+				99683910988D49ABB9CFE365 /* Gravity-BookItalic.otf */,
+				30546389C00F443597451272 /* Gravity-Italic.otf */,
+				1B71835184A1459FA8538DC7 /* Gravity-Light.otf */,
+				008A3CDD6B78444588C5223E /* Gravity-LightItalic.otf */,
+				D595DEA872F74EE081AFF92E /* Gravity-Regular.otf */,
+				BA9E918D6F754F238128F95D /* Gravity-UltraLight.otf */,
+				2C0A2D9CAB6D4D17BD69CB61 /* Gravity-UltraLightItalic.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1130,6 +1168,17 @@
 				71E051225BA846A1B3A3705C /* Octicons.ttf in Resources */,
 				D0139137DEAD4E75AA686639 /* SimpleLineIcons.ttf in Resources */,
 				8BA1D2EC29EA453DB4BEA530 /* Zocial.ttf in Resources */,
+				87E5D11823F34E2E8A8AD974 /* Quantify.ttf in Resources */,
+				233E7BA4BE734E118AF34869 /* Gravity-Bold.otf in Resources */,
+				3896F4F67D0745E69D95AE16 /* Gravity-BoldItalic.otf in Resources */,
+				3120F1E9F08947C5A0764925 /* Gravity-Book.otf in Resources */,
+				6CD5E5F286924DE59413DF1C /* Gravity-BookItalic.otf in Resources */,
+				327F949493474C6794D75893 /* Gravity-Italic.otf in Resources */,
+				5CF43C9016B94161A1BFB38F /* Gravity-Light.otf in Resources */,
+				552B72681EB341998C9EA594 /* Gravity-LightItalic.otf in Resources */,
+				8A9DB0DEC0F841F9A1A9DD0C /* Gravity-Regular.otf in Resources */,
+				194C1BD7F5324FCB89468897 /* Gravity-UltraLight.otf in Resources */,
+				AFF757541BC84D98A0A2982E /* Gravity-UltraLightItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1267,11 +1316,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 				);
 			};
 			name = Debug;
@@ -1296,11 +1347,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 				);
 			};
 			name = Release;
@@ -1325,6 +1378,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 				);
 			};
 			name = Debug;
@@ -1348,6 +1402,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 				);
 			};
 			name = Release;
@@ -1380,11 +1435,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 				);
 			};
 			name = Debug;
@@ -1417,11 +1474,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 				);
 			};
 			name = Release;
@@ -1453,11 +1512,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 				);
 			};
 			name = Debug;
@@ -1489,11 +1550,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 				);
 			};
 			name = Release;

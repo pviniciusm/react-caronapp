@@ -24,11 +24,13 @@ import Welcome from './home/WelcomeScreen';
 import Home from './home/HomeScreen';
 import Procurar from './caronas/procurar';
 import Oferecer from './caronas/oferecer';
+import Login from './home/Login'
 
 const title = "CaronApp";
 
-//import AppNavigator from './Navigation/StackNav'
-import DrawNavigator from './Navigation/DrawNav'
+import AppNavigator from './Navigation/StackNav'
+import DrawNavigator from './Navigation/DrawNav';
+
 
 /*const AppContainer = createAppContainer(DrawNavigator);
 export default AppContainer;*/
@@ -37,7 +39,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <DrawNavigator />
+      <AppNavigator />
     );
   }
 }

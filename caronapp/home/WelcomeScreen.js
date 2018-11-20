@@ -17,8 +17,10 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, Image, View, ScrollView, RefreshControl, TouchableOpacity, ImageBackground} from 'react-native';
-import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
+import {StatusBar, Platform, StyleSheet, Text, Image, View, ScrollView, RefreshControl, TouchableOpacity, ImageBackground} from 'react-native';
+import MainBar from './MainBar';
+
+import styles from '../styles/styles'
 
 const title = "CaronApp";
 
@@ -32,17 +34,19 @@ export default class Welcome extends Component {
       isDay: true,
       refreshing: false,
     }
+    console.log(this.props);
+    //this.props.navigation.toggleDrawer();
   }
 
   static navigationOptions = {
-    header: null
-}
+    title: 'Home',
+  };
 
 
 
   _onRefresh = () => {
     this.setState({refreshing: true});
-    this.props.navigation.openDrawer();
+    //this.props.navigation.openDrawer();
     Promise.resolve(this.changeDay()).then(() => {
       this.setState({refreshing: false});
     });
@@ -63,13 +67,14 @@ export default class Welcome extends Component {
 
   render() {
     return (
-      <GestureRecognizer style={styles.container}        
-      >
-        <View style={styles.header}>
-          <Text style={styles.welcome}>
-            {title}
-          </Text>
-        </View>
+      <View style={ofstyles.container}>
+        <StatusBar
+            backgroundColor={styles.blueBackground.backgroundColor}
+            barStyle="light-content"
+            animated={true}
+        />
+
+        <MainBar navs={this.props.navigation} />
         
         <ScrollView refreshControl={
             <RefreshControl
@@ -84,12 +89,12 @@ export default class Welcome extends Component {
             </View>
             
             
-            <View style={styles.buttons}>
-              <TouchableOpacity style={styles.buts} onPress={() => this.props.navigation.navigate('Oferecer')}>
+            <View style={ofstyles.buttons}>
+              <TouchableOpacity style={ofstyles.buts} onPress={() => this.props.navigation.navigate('Oferecer')}>
                 <Text style={{color:"#FFF", fontSize:18}}>Oferecer</Text>
               </TouchableOpacity>
               
-              <TouchableOpacity style={styles.buts2} onPress={() => this.props.navigation.navigate('Procurar')}>
+              <TouchableOpacity style={ofstyles.buts2} onPress={() => this.props.navigation.navigate('Procurar')}>
                 <Text style={{color:"#FFF",fontSize:18}}>Procurar</Text>
               </TouchableOpacity>
             </View>
@@ -99,60 +104,60 @@ export default class Welcome extends Component {
 
           
 
-          <View style={styles.posts}>
+          <View style={ofstyles.posts}>
             <Text style={{fontWeight:'bold', color:"#FFF",fontSize:20, padding:10}}>Caronas Oferecidas</Text>
 
-            <View style={styles.postContainer}>
-              <View style={styles.myPost}>
-                <Text style={styles.title}> 
-                  <Text style={styles.titleBefore}>de </Text> 
+            <View style={ofstyles.postContainer}>
+              <View style={ofstyles.myPost}>
+                <Text style={ofstyles.title}> 
+                  <Text style={ofstyles.titleBefore}>de </Text> 
                   Rosário do Sul - RS
                 </Text>
-                <Text style={styles.title}> 
-                <Text style={styles.titleBefore}>para </Text> 
+                <Text style={ofstyles.title}> 
+                <Text style={ofstyles.titleBefore}>para </Text> 
                 Santa Maria - RS
                 </Text>
-                <View style={styles.postInfo}>
+                <View style={ofstyles.postInfo}>
                   <Text style={{fontSize:20, fontWeight:'bold'}}>
                     2
                     <Text style={{fontSize:12, fontWeight:'normal'}}> / 3 </Text>
                     caronas confirmadas!
                   </Text>  
                 </View>
-                <View style={styles.postInfo}>
+                <View style={ofstyles.postInfo}>
                   <Text style={{fontSize:16, color: '#222', fontWeight:'bold'}}>
                     Data: 20/10/2018
                   </Text>  
                 </View>
-                <View style={styles.postInfo}>
+                <View style={ofstyles.postInfo}>
                   <Text style={{fontSize:16, color: '#222', fontWeight:'bold'}}>
                     Horario previsto: 19:30
                   </Text>  
                 </View>
               </View>
               
-              <View style={styles.myPost}>
-                <Text style={styles.title}> 
-                  <Text style={styles.titleBefore}>de </Text> 
+              <View style={ofstyles.myPost}>
+                <Text style={ofstyles.title}> 
+                  <Text style={ofstyles.titleBefore}>de </Text> 
                   Santa Maria - RS
                 </Text>
-                <Text style={styles.title}> 
-                  <Text style={styles.titleBefore}>para </Text> 
+                <Text style={ofstyles.title}> 
+                  <Text style={ofstyles.titleBefore}>para </Text> 
                   Porto Alegre - RS
                   </Text>
-                <View style={styles.postInfo}>
+                <View style={ofstyles.postInfo}>
                   <Text style={{fontSize:20, fontWeight:'bold'}}>
                     0
                     <Text style={{fontSize:12, fontWeight:'normal'}}> / 3 </Text>
                     caronas confirmadas!
                   </Text>  
                 </View>
-                <View style={styles.postInfo}>
+                <View style={ofstyles.postInfo}>
                   <Text style={{fontSize:16, color: '#222', fontWeight:'bold'}}>
                     Data: 21/10/2018
                   </Text>  
                 </View>
-                <View style={styles.postInfo}>
+                <View style={ofstyles.postInfo}>
                   <Text style={{fontSize:16, color: '#222', fontWeight:'bold'}}>
                     Horario previsto: 08:00
                   </Text>  
@@ -166,56 +171,56 @@ export default class Welcome extends Component {
 
 
 
-          <View style={styles.posts2}>
+          <View style={ofstyles.posts2}>
             <Text style={{fontWeight:'bold', color:"#FFF",fontSize:20, padding:10}}>Caronas Solicitadas</Text>
 
-            <View style={styles.postContainer}>
-              <View style={styles.myPost}>
-                <Text style={styles.title}> 
-                  <Text style={styles.titleBefore}>de </Text> 
+            <View style={ofstyles.postContainer}>
+              <View style={ofstyles.myPost}>
+                <Text style={ofstyles.title}> 
+                  <Text style={ofstyles.titleBefore}>de </Text> 
                   Rosário do Sul - RS
                 </Text>
-                <Text style={styles.title}> 
-                <Text style={styles.titleBefore}>para </Text> 
+                <Text style={ofstyles.title}> 
+                <Text style={ofstyles.titleBefore}>para </Text> 
                 Santa Maria - RS
                 </Text>
-                <View style={styles.postInfo}>
+                <View style={ofstyles.postInfo}>
                   <Text style={{fontSize:20, fontWeight:'bold'}}>
                     CONFIRMADO!
                   </Text>  
                 </View>
-                <View style={styles.postInfo}>
+                <View style={ofstyles.postInfo}>
                   <Text style={{fontSize:16, color: '#222', fontWeight:'bold'}}>
                     Data: 18/10/2018
                   </Text>  
                 </View>
-                <View style={styles.postInfo}>
+                <View style={ofstyles.postInfo}>
                   <Text style={{fontSize:16, color: '#222', fontWeight:'bold'}}>
                     Horario previsto: 13:45
                   </Text>  
                 </View>
               </View>
               
-              <View style={styles.myPost}>
-                <Text style={styles.title}> 
-                  <Text style={styles.titleBefore}>de </Text> 
+              <View style={ofstyles.myPost}>
+                <Text style={ofstyles.title}> 
+                  <Text style={ofstyles.titleBefore}>de </Text> 
                   Santa Maria - RS
                 </Text>
-                <Text style={styles.title}> 
-                  <Text style={styles.titleBefore}>para </Text> 
+                <Text style={ofstyles.title}> 
+                  <Text style={ofstyles.titleBefore}>para </Text> 
                   Porto Alegre - RS
                   </Text>
-                <View style={styles.postInfo}>
+                <View style={ofstyles.postInfo}>
                   <Text style={{fontSize:20, fontWeight:'bold'}}>
                     Ainda sem resposta...
                   </Text>  
                 </View>
-                <View style={styles.postInfo}>
+                <View style={ofstyles.postInfo}>
                   <Text style={{fontSize:16, color: '#222', fontWeight:'bold'}}>
                     Data: 21/10/2018
                   </Text>  
                 </View>
-                <View style={styles.postInfo}>
+                <View style={ofstyles.postInfo}>
                   <Text style={{fontSize:16, color: '#222', fontWeight:'bold'}}>
                     Horario previsto: 08:00
                   </Text>  
@@ -227,12 +232,12 @@ export default class Welcome extends Component {
           
         </ScrollView>
 
-      </GestureRecognizer>
+      </View>
     );
   }
 }
 
-export const styles = StyleSheet.create({
+export const ofstyles = StyleSheet.create({
   buttons: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -262,14 +267,14 @@ export const styles = StyleSheet.create({
     backgroundColor: '#F8F9F3',
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 26,
     textAlign: 'center',
     margin: 10,
-    fontWeight:'bold',
+    //fontWeight:'bold',
     color: '#FFF',
   },
   header: {
-    backgroundColor:'#114B5F',
+    backgroundColor: styles.blueBackground.backgroundColor,//'#114B5F',
     padding:10,
     
     flexDirection:'row',

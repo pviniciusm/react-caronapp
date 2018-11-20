@@ -5,20 +5,14 @@ import Home from '../home/HomeScreen';
 import Procurar from '../caronas/procurar';
 import Oferecer from '../caronas/oferecer';
 
-//import DrawNavigator from './DrawNav';
+import Login from '../home/Login';
+import DrawNavigator from './DrawNav';
 
 export default AppNavigator = StackNavigator({
-    //Welcome: DrawNavigator,
-    //Dra: DrawNavigator,
-    Welcome:Welcome,
-    //Dra: DrawNavigator,
-    //RWelcome: Welcome,
-    //Procurar: Procurar,
-    //Oferecer: Oferecer,
+  Login:Login,  
+  Welcome: DrawNavigator,
   },{
-    navigationOptions:{
-        header: null,
-    }
+    headerMode:'none'
   }
   );
 

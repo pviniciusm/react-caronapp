@@ -5,12 +5,13 @@ import Welcome from '../home/WelcomeScreen';
 import Home from '../home/HomeScreen';
 import {Procurar, Proc} from '../caronas/procurar';
 import Oferecer from '../caronas/oferecer';
+import Login from '../home/Login';
 
 import AppNavigator from './StackNav';
 
 
 export default DrawNavigator = DrawerNavigator({
-    
+    //Login:Login,
     Welcome: Welcome,
     //Home: Home,
     //Procurar: Procurar,
@@ -18,9 +19,7 @@ export default DrawNavigator = DrawerNavigator({
     Procurar: Procurar,
     Oferecer: Oferecer,
   },{
-      navigationOptions:{
-          header: null,
-      }
+      
   }
 );
 
