@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "612094773056",
+    "firebase_url": "https://caronapp-pvinics.firebaseio.com",
+    "project_id": "caronapp-pvinics",
+    "storage_bucket": "caronapp-pvinics.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612094773056:android:766a9fde424a0632",
+        "android_client_info": {
+          "package_name": "com.caronapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612094773056-sdd0iv1mrba7ntum5pbdvorjm8e6c0ls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC96HhVpw44b3vycT7ZyPv5PzpvR7oDEgQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

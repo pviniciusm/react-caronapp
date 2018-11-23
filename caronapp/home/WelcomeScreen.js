@@ -24,9 +24,6 @@ import styles from '../styles/styles'
 
 const title = "CaronApp";
 
-
-
-
 export default class Welcome extends Component {
   constructor(props) {
     super(props)
@@ -41,8 +38,6 @@ export default class Welcome extends Component {
   static navigationOptions = {
     title: 'Home',
   };
-
-
 
   _onRefresh = () => {
     this.setState({refreshing: true});
@@ -63,7 +58,6 @@ export default class Welcome extends Component {
   fontDay = () => {
     return this.state.isDay ? {} : {color:"#FFF"};
   }
-
 
   render() {
     return (
