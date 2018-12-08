@@ -8,18 +8,15 @@ import Oferecer from '../caronas/oferecer';
 import Login from '../home/Login';
 
 import AppNavigator from './StackNav';
+import { DrawerContainer } from "./DrawContainer";
 
 
 export default DrawNavigator = DrawerNavigator({
-    //Login:Login,
     Welcome: Welcome,
-    //Home: Home,
-    //Procurar: Procurar,
-    //drOferecer: Oferecer,
     Procurar: Procurar,
     Oferecer: Oferecer,
   },{
-      
+      contentComponent: DrawerContainer
   }
 );
 

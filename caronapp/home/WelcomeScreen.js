@@ -20,28 +20,53 @@ import React, {Component} from 'react';
 import {StatusBar, Platform, StyleSheet, Text, Image, View, ScrollView, RefreshControl, TouchableOpacity, ImageBackground} from 'react-native';
 import MainBar from './MainBar';
 
-import styles from '../styles/styles'
+import CaronaPost from '../caronas/Posts/Post';
+
+import styles from '../styles/styles';
+import ofstyles from '../styles/ofstyles';
+import firebase from 'react-native-firebase';
 
 const title = "CaronApp";
 
 export default class Welcome extends Component {
   constructor(props) {
     super(props)
+    
     this.state = {
       isDay: true,
       refreshing: false,
+      user: null,
     }
-    console.log(this.props);
-    //this.props.navigation.toggleDrawer();
+
+   
+    
   }
 
-  static navigationOptions = {
-    title: 'Home',
-  };
+  
+
+  componentDidMount(){
+    this.listener = firebase.auth().onAuthStateChanged(user => {
+      user 
+          ? this.setState({ user })
+          : this.props.navigation.navigate('Login')
+    })
+
+    usr = firebase.auth().currentUser
+    this.ref = firebase.firestore().collection('users').doc(usr.uid)
+
+    var docData = this.ref.get().then(doc => {
+      usrData = doc.data()
+      this.setState({
+        firstname: usrData.firstname,
+        email: usrData.email
+      })
+    })
+
+    
+  }
 
   _onRefresh = () => {
     this.setState({refreshing: true});
-    //this.props.navigation.openDrawer();
     Promise.resolve(this.changeDay()).then(() => {
       this.setState({refreshing: false});
     });
@@ -49,6 +74,13 @@ export default class Welcome extends Component {
 
   changeDay = () => {
     this.setState({isDay: new Date().getHours() < 19});
+  }
+
+  pushSomeDataOnFirebase = () => {
+    firebase.database().ref('/usuario/'+this.state.user.uid).set({
+      userid: this.state.user.uid,
+      preco: 20,
+    })
   }
 
   imgDay = () => {
@@ -59,7 +91,23 @@ export default class Welcome extends Component {
     return this.state.isDay ? {} : {color:"#FFF"};
   }
 
+  componentWillUnmount(){
+    this.listener();
+  }
+
+  firstname(){
+    console.log('AQQUI')
+    console.log(this.state)
+    //console.log(this.state.usrData.email)
+    return "oi"
+  }
+
   render() {
+    /*if(!this.state.user){
+      return <MainBar />;
+      //this.props.navigation.navigate('Login')
+    }*/
+
     return (
       <View style={ofstyles.container}>
         <StatusBar
@@ -78,13 +126,13 @@ export default class Welcome extends Component {
           }>
           <ImageBackground source={this.imgDay()} style={{flexDirection:'column'}}>
             <View style={{flexDirection:'column', alignItems:'center', paddingTop:20,}}>
-              <Text style={[{fontWeight:'bold', color:"#222",fontSize:20,}, this.fontDay()]}>Bem vindo(a), José!</Text>
+              <Text style={[{fontWeight:'bold', color:"#222",fontSize:20,}, this.fontDay()]}>Bem vindo(a), {this.state.firstname}</Text>
               <Text style={[{color:"#555",fontSize:14,}, this.fontDay()]}>O que temos para hoje?</Text>
             </View>
             
             
             <View style={ofstyles.buttons}>
-              <TouchableOpacity style={ofstyles.buts} onPress={() => this.props.navigation.navigate('Oferecer')}>
+              <TouchableOpacity style={ofstyles.buts} onPress={() => this.pushSomeDataOnFirebase()}>
                 <Text style={{color:"#FFF", fontSize:18}}>Oferecer</Text>
               </TouchableOpacity>
               
@@ -100,6 +148,22 @@ export default class Welcome extends Component {
 
           <View style={ofstyles.posts}>
             <Text style={{fontWeight:'bold', color:"#FFF",fontSize:20, padding:10}}>Caronas Oferecidas</Text>
+
+
+            <CaronaPost 
+              cid_origem="Porto Alegre - RS" 
+              cid_dest="Santa Maria - RS" 
+              confirmados={["user2.png", "user3.jpeg", "user4.png"]}
+              user="user1.jpg"
+              />
+
+            <CaronaPost />
+
+            <CaronaPost />
+
+            <CaronaPost />
+
+            <CaronaPost />
 
             <View style={ofstyles.postContainer}>
               <View style={ofstyles.myPost}>
@@ -231,7 +295,7 @@ export default class Welcome extends Component {
   }
 }
 
-export const ofstyles = StyleSheet.create({
+export const ofstyles2 = StyleSheet.create({
   buttons: {
     flexDirection: 'row',
     flexWrap: 'wrap',

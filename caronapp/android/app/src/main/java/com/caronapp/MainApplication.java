@@ -13,6 +13,9 @@ import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import android.content.Intent; // <--- import
 import android.content.res.Configuration; // <--- import
+import io.invertase.firebase.auth.RNFirebaseAuthPackage;
+import io.invertase.firebase.database.RNFirebaseDatabasePackage;
+import io.invertase.firebase.firestore.RNFirebaseFirestorePackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -32,7 +35,10 @@ public class MainApplication extends Application implements ReactApplication {
             new RNFirebasePackage(),
             new OrientationPackage(),
             new RNGestureHandlerPackage(),
-            new VectorIconsPackage()
+            new VectorIconsPackage(),
+            new RNFirebaseAuthPackage(),
+            new RNFirebaseDatabasePackage(),
+            new RNFirebaseFirestorePackage()
       );
     }
 

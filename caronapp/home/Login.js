@@ -1,20 +1,70 @@
 import React, { Component } from 'react'
-import { StatusBar, StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native'
+import { Alert, StatusBar, StyleSheet, Text, View, TouchableOpacity, ActivityIndicator } from 'react-native'
 import styles from '../styles/styles'
 import { Button, Icon } from 'react-native-elements';
 import { TextInput } from 'react-native-paper';
-import { Orientation } from 'react-native-orientation';
+import firebase from 'react-native-firebase';
+import Welcome from './WelcomeScreen';
 
 
 export class LoginScreen extends Component {
 
-  componentWillMount(){
-    //Orientation.lockToPortrait();
-  }  
+    constructor(){
+        super()
+
+        this.state = {
+            email: '',
+            password: '',
+            isAuth: false,
+            loading: false,
+        }
+    }
+
+    componentWillMount(){
+        firebase.auth().onAuthStateChanged(user => {
+            this.setState({isAuth: user})
+            this.props.navigation.navigate(user ? 'Welcome':'Login')
+        })
+    }
+  
+    login = async() => {
+        
+        const { email, password } = this.state;
+
+        try{
+            console.log('vamos verificar email e senha')
+            if(!(email && password)){
+                throw new Error()
+            }
+
+            this.setState({loading:true})
+            
+            const user = await firebase.auth()
+                .signInWithEmailAndPassword(email, password);
+            this.setState({isAuth: true})
+            this.props.navigation.navigate('Welcome')  
+        } catch(err){
+            this.showAlert()
+        } finally {
+            this.setState({loading:false})
+        }   
+    }
+
+    showAlert = () => {
+        Alert.alert(
+            'Senha ou e-email errados.'
+        )
+    }
+
 
   render() {
+
+    if(this.state.isAuth){
+        //this.props.navigation.navigate('Loading')
+        return <Welcome />;
+    } 
+
     return (
-      //<ScrollView>
       
       <View style={[{flex:1, flexDirection:'column', justifyContent:'space-between', alignItems:'center'}, ofstyles.container]}>
         <StatusBar
@@ -44,10 +94,11 @@ export class LoginScreen extends Component {
                     <View style={{alignSelf:'flex-end', width:'80%'}}>
                         <TextInput
                             placeholder="Digite seu e-mail..."
-                            style={{fontSize:20}}
                             onSubmitEditing={()=>{this.refs.passs.focus()}}
+                            onChangeText={email => {this.setState({ email })}}
                             type="outlined"
-                            style={[styles.whiteBackground,{minWidth:'70%'}]}
+                            style={[styles.whiteBackground,{minWidth:'70%',fontSize:20}]}
+                            theme={{ colors: { primary: styles.blueText.color }}}
                         />
                     </View>
                 </View>
@@ -66,10 +117,12 @@ export class LoginScreen extends Component {
                         <TextInput
                             placeholder="Digite sua senha..."
                             ref="passs"
-                            style={{fontSize:20}}
-                            //onSubmitEditing={()=>{this.refs.passs.focus()}}
+                            onChangeText={password => {this.setState({ password })}}
+                            onSubmitEditing={()=>{this.login()}}
                             type="outlined"
-                            style={[styles.whiteBackground,{minWidth:'70%'}]}
+                            style={[styles.whiteBackground,{minWidth:'70%',fontSize:20}]}
+                            theme={{ colors: { primary: styles.blueText.color }}}
+                            secureTextEntry={true}
                         />
                     </View>
                 </View>
@@ -82,7 +135,7 @@ export class LoginScreen extends Component {
                     <Text>
                         |
                     </Text>
-                    <TouchableOpacity style={[{padding:10,marginLeft:10}]}>
+                    <TouchableOpacity onPress={ () => this.props.navigation.navigate('SignUp')} style={[{padding:10,marginLeft:10}]}>
                         <Text style={[styles.titleBody,styles.blackText, ofstyles.forgot]}>Cadastre-se</Text>
                     </TouchableOpacity>
                 </View>
@@ -90,9 +143,19 @@ export class LoginScreen extends Component {
 
             <View style={[{marginTop:30, alignItems:'center'}]}>
                 <TouchableOpacity
-                    onPress={() => this.props.navigation.navigate('Welcome')}
-                     style={[styles.greenBackground, {borderRadius:2,alignItems:'center', width:'98%', padding:10, paddingLeft:20, paddingRight:20}]}>
-                    <Text style={[styles.whiteText, styles.titleBody,{fontSize:18}]}>Login</Text>
+                    disabled={this.state.loading}
+                    onPress={() => this.login()}
+                    style={[!this.state.loading ? styles.greenBackground : styles.blueAltBackground, {flexDirection:'row',borderRadius:2,alignItems:'center', justifyContent:'center', width:'68%', padding:10, paddingLeft:20, paddingRight:20}]}>
+                    { this.state.loading &&
+                        <ActivityIndicator
+                            size="small"
+                            color={styles.whiteAltText.color} 
+                            style={{paddingRight:20}}
+                        />
+                    }
+                    <Text style={[styles.whiteText, styles.titleBody,{fontSize:18}]}>
+                        Login
+                    </Text>
                 </TouchableOpacity>
             </View>
         </View>
